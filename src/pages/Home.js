@@ -1,12 +1,16 @@
 import React from 'react';
-import {Container, Typography} from '@mui/material';
+import {Container} from '@mui/material';
+
+import {Form} from '../components/form/Form';
 
 const Home = () => {
+  const addNewRecord = (data) => {
+    console.log('onSubmit', data);
+  };
+
   return (
     <Container>
-      <Typography variant="h4" component="h1" gutterBottom>
-        Home page
-      </Typography>
+      <Form onSubmit={addNewRecord} />
     </Container>
   );
 };
