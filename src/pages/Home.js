@@ -2,6 +2,7 @@ import React from 'react';
 import {Container} from '@mui/material';
 
 import {Form} from '../components/form/Form';
+import {List} from '../components/list/List';
 
 const Home = () => {
   const addNewRecord = (data) => {
@@ -11,6 +12,7 @@ const Home = () => {
   return (
     <Container>
       <Form onSubmit={addNewRecord} />
+      <List />
     </Container>
   );
 };
