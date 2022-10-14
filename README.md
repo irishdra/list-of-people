@@ -33,4 +33,4 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## Where to watch
 
-There you can see the result [site](https://63499b5b60aa2804bcbe3091--silly-biscuit-b5bcb8.netlify.app/).
+There you can see the result [site](https://silly-biscuit-b5bcb8.netlify.app/).
