@@ -1,10 +1,10 @@
 export const formGenderRadioGroupOptions = [
   {
     label: 'Male',
-    value: true,
+    value: 'male',
   },
   {
     label: 'Female',
-    value: false,
+    value: 'female',
   },
 ];
