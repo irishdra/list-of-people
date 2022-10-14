@@ -14,13 +14,23 @@ const defaultValues = {
   firstName: '',
   lastName: '',
   phone: '',
-  gender: true,
+  gender: 'male',
   age: 0,
 };
 
 export const Form = ({onSubmit}) => {
   const methods = useForm({defaultValues: defaultValues});
   const {register, handleSubmit, reset, control} = methods;
+
+  const beforeSubmit = (data) => {
+    const newRecord = {
+      ...data,
+      gender: data.gender === 'male',
+    };
+
+    onSubmit(newRecord);
+    reset();
+  };
 
   return (
     <Paper
@@ -76,7 +86,7 @@ export const Form = ({onSubmit}) => {
         }}
       >
         <Button
-          onClick={handleSubmit(onSubmit)}
+          onClick={handleSubmit(beforeSubmit)}
           variant="contained"
         >
           Add record
